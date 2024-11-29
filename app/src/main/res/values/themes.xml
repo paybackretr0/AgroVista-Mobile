@@ -1,0 +1,11 @@
+<resources>
+    <style name="Base.Theme.AgroWista" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/ijau</item>
+<!--        <item name="colorOnPrimary">@color/ijauMuda</item>-->
+<!--        <item name="colorPrimaryVariant">@color/ijauMuda</item>-->
+        <item name="colorSecondary">@color/ijauMuda</item>
+        <item name="bottomNavigationStyle">@color/ijauMuda</item>
+    </style>
+
+    <style name="Theme.AgroWista" parent="Base.Theme.AgroWista" />
+</resources>
