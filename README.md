@@ -1,5 +1,5 @@
-# AgroVista Mobile 
-  AgroVista is an Android application that serves as the mobile version of the AgroVista platform, designed to help users submit reviews and report environmental pollution incidents or maybe vandalism that happen in Desa Wisata Leuwimalang
+# AgroWista Mobile 
+  AgroWista is an Android application that serves as the mobile version of the AgroVista platform, designed to help users submit reviews and report environmental pollution incidents or maybe vandalism that happen in Desa Wisata Leuwimalang
   
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
@@ -11,11 +11,11 @@
 ## Installation
 Open the terminal in the folder where you want to store the project:
 ```
-git clone https://github.com/paybackretr0/AgroVista-Mobile.git
+git clone https://github.com/paybackretr0/AgroWista-Mobile.git
 ```
 Navigate to the cloned project folder:
 ```
-cd AgroVista-Mobile
+cd AgroWista-Mobile
 ```
 Here are the steps to push changes:
 ```
