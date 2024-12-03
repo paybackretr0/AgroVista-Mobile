@@ -35,8 +35,6 @@ class LoginViewModel(private val userPreferences: UserPreferences) : ViewModel()
                             userPreferences.setLoggedInStatus(true)
                         }
                     }
-                    Log.d("LoginViewModel", "login: ${response.message}")
-                    Log.d("LoginViewModel", "login: ${response.user}")
                     _loginResult.postValue(Result.success(response))
                     _isLoading.value = false
                 } else {
@@ -52,6 +50,14 @@ class LoginViewModel(private val userPreferences: UserPreferences) : ViewModel()
                 _loginResult.postValue(Result.failure(e))
                 Log.e("LoginViewModel", "loginError: ${e.message}")
             }
+        }
+    }
+
+    fun logout() {
+        _isLoading.value = true
+        viewModelScope.launch {
+            userPreferences.logout()
+            _isLoading.value = false
         }
     }
 

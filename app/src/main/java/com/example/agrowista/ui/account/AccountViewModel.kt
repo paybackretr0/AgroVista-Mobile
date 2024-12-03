@@ -45,8 +45,6 @@ class AccountViewModel(private val userPreferences: UserPreferences) : ViewModel
         _isLoading.value = true
         viewModelScope.launch {
             userPreferences.logout()
-            Log.d("AccountViewModel", "User: ${userPreferences.isUserLoggedIn()}")
-            Log.d("AccountViewModel", "User: ${userPreferences.getUserId()}")
             _isLoading.value = false
         }
     }

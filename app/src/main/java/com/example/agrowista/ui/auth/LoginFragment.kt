@@ -56,6 +56,7 @@ class LoginFragment : Fragment() {
         }
 
         binding.actionHomeText.setOnClickListener {
+            viewModel.logout()
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
         }
     }
