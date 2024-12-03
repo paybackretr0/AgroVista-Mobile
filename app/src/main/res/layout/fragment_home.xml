@@ -71,7 +71,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
-
             <HorizontalScrollView
                 android:id="@+id/stats_scroll_view"
                 android:layout_width="match_parent"
@@ -90,7 +89,11 @@
                         android:id="@+id/card_ulasan"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
-                        android:layout_marginHorizontal="4dp">
+                        android:layout_marginHorizontal="4dp"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -134,7 +137,11 @@
                         android:id="@+id/card_wisata"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
-                        android:layout_marginHorizontal="4dp">
+                        android:layout_marginHorizontal="4dp"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -178,7 +185,11 @@
                         android:id="@+id/card_produk"
                         android:layout_width="120dp"
                         android:layout_height="100dp"
-                        android:layout_marginHorizontal="4dp">
+                        android:layout_marginHorizontal="4dp"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"

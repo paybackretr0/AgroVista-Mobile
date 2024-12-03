@@ -7,6 +7,7 @@ import com.example.agrowista.ui.auth.LoginViewModel
 import com.example.agrowista.ui.account.AccountViewModel
 import com.example.agrowista.ui.home.HomeViewModel
 import com.example.agrowista.ui.regis.RegisterViewModel
+import com.example.agrowista.ui.report.ReportViewModel
 import com.example.agrowista.ui.ulasan.UlasanViewModel
 
 class ViewModelFactory(private val userPreferences: UserPreferences) : ViewModelProvider
@@ -29,6 +30,9 @@ class ViewModelFactory(private val userPreferences: UserPreferences) : ViewModel
             }
             modelClass.isAssignableFrom(UlasanViewModel::class.java) -> {
                 UlasanViewModel(userPreferences) as T
+            }
+            modelClass.isAssignableFrom(ReportViewModel::class.java) -> {
+                ReportViewModel(userPreferences) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

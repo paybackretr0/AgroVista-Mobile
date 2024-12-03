@@ -10,7 +10,7 @@ import android.widget.AutoCompleteTextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
-import com.example.agrowista.R
+import androidx.navigation.fragment.findNavController
 import com.example.agrowista.data.UserPreferences
 import com.example.agrowista.data.response.DataItem
 import com.example.agrowista.databinding.FragmentUlasanBinding
@@ -25,6 +25,7 @@ class UlasanFragment : Fragment() {
     private lateinit var viewModel: UlasanViewModel
     private var jenisWisataList = mutableListOf<DataItem>()
     private var selectedWisataId: Int? = null
+    private var selectedGender: Char? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,6 +52,7 @@ class UlasanFragment : Fragment() {
                 sendReviewAsGuest()
             } else {
                 setupReviewSubmission()
+                binding.loginBanner.visibility = View.GONE
             }
         }
     }
@@ -62,6 +64,10 @@ class UlasanFragment : Fragment() {
             etAsal.isEnabled = true
             etPekerjaan.isEnabled = true
             genderAutoComplete.isEnabled = true
+            binding.loginBanner.visibility = View.VISIBLE
+            binding.btnLogin.setOnClickListener {
+                findNavController().navigate(UlasanFragmentDirections.actionUlasanFragmentToLoginFragment())
+            }
         }
     }
 
@@ -99,9 +105,9 @@ class UlasanFragment : Fragment() {
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, genderOptions)
         genderDropdown.setAdapter(adapter)
         genderDropdown.setOnItemClickListener { _, _, position, _ ->
-            val selectedGender = when (position) {
-                0 -> "L"
-                1 -> "P"
+             selectedGender = when (position) {
+                0 -> 'L'
+                1 -> 'P'
                 else -> null
             }
             Log.d("Ulasan", "Selected gender: $selectedGender")
@@ -173,7 +179,7 @@ class UlasanFragment : Fragment() {
             val umur = binding.etUmur.text.toString()
             val asal = binding.etAsal.text.toString()
             val pekerjaan = binding.etPekerjaan.text.toString()
-            val jenis_kelamin = binding.genderAutoComplete.text.toString()
+            val jenis_kelamin = selectedGender.toString()
             val ulasan = binding.etUlasan.text.toString()
 
             if(asal.isBlank() || pekerjaan.isBlank() || jenis_kelamin.isBlank() || ulasan.isBlank
@@ -198,6 +204,13 @@ class UlasanFragment : Fragment() {
                 } catch (e: Exception) {
                     Log.e("UlasanFragment", "Error sending review: ${e.message}")
                     Snackbar.make(binding.root, "Gagal mengirim ulasan", Snackbar.LENGTH_LONG).show()
+                    binding.etNama.text?.clear()
+                    binding.etUmur.text?.clear()
+                    binding.etAsal.text?.clear()
+                    binding.etPekerjaan.text?.clear()
+                    binding.genderAutoComplete.text?.clear()
+                    binding.etUlasan.text?.clear()
+                    binding.etJenisWisata.text?.clear()
                 }
             }
         }

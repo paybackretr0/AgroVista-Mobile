@@ -78,5 +78,24 @@
     <string name="back_to_login">Back to Login</string>
     <string name="scan_qr_code">Scan QR Code</string>
     <string name="report">Report</string>
+    <string name="jaga_desa">🌍 Bantu Jaga Keindahan Desa Wisata!</string>
+    <string name="pesan_report">Laporkan pencemaran, vandalism, atau tindakan merusak lingkungan lainnya di Desa Wisata Leuwimalang. Jadilah bagian dari perubahan positif! 💚</string>
+    <string name="login_sekarang">Login Sekarang ➜</string>
+    <string name="pohon">🌳</string>
+    <string name="lindungi_alam_kita">Lindungi Alam Kita</string>
+    <string name="pesan2_report">Laporkan setiap tindakan yang mengancam keindahan alam Desa Wisata Leuwimalang.</string>
+    <string name="pesan3_report">Laporkan Masalah! 🚨</string>
+    <string name="judul_laporan">Judul Laporan 📝</string>
+    <string name="desc_report">Deskripsi 🖋️</string>
+    <string name="gallery">Gallery 🖼️</string>
+    <string name="camera">Camera 📷</string>
+    <string name="kirim_laporan">Kirim Laporan</string>
+    <string name="pesan_ulasan">🎁 Dapatkan Poin untuk Setiap Ulasan!</string>
+    <string name="pesan2_ulasan">Login untuk mengumpulkan poin dan tukarkan dengan hadiah menarik 🎉</string>
+    <string name="camera_permission_required">Camera permission is required to use the camera</string>
+    <string name="failed_to_start_camera">Failed to start camera</string>
+    <string name="insert_image_first">Please insert an image first</string>
+    <string name="invalid_image">Invalid image</string>
+    <string name="failed_to_capture_image">Failed to capture image</string>
 
 </resources>
